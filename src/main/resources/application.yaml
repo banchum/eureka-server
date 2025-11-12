@@ -1,0 +1,17 @@
+server:
+  port: 3150
+
+spring:
+  application:
+    name: eureka-server
+
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: false
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZon: http://${eureka.instance.hostname}:${server.port}/eureka/
+
